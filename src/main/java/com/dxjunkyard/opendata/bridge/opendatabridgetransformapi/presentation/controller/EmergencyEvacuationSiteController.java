@@ -16,12 +16,14 @@ import org.springframework.http.MediaType;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
 
-@RestController("/v1/emergency-evacuation-site")
+@RestController
+@RequestMapping("/v1/emergency-evacuation-site")
 @RequiredArgsConstructor
 public class EmergencyEvacuationSiteController {
 
@@ -41,9 +43,7 @@ public class EmergencyEvacuationSiteController {
     @PostMapping("/transform")
     public Mono<EmergencyEvacuationSiteListResponse> transform(@Validated @RequestBody EmergencyEvacuationSiteListRequestBody requestBody) {
 
-        final List<EmergencyEvacuationSite> emergencyEvacuationSites = requestBody.emergencyEvacuationSiteList().stream()
-                .map(EmergencyEvacuationSiteRequestBody::toEmergencyEvacuationSite)
-                .toList();
+        final List<EmergencyEvacuationSite> emergencyEvacuationSites = requestBody.toEmergencyEvacuationSiteList();
 
         final List<EmergencyEvacuationSiteResponse> siteResponseList = emergencyEvacuationSites.stream()
                 .map(responseBuilder::build).toList();

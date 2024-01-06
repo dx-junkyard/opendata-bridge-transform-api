@@ -50,6 +50,7 @@ public class EmergencyEvacuationSiteResponseBuilder {
                 .disasterLargeFire(emergencyEvacuationSite.getDisasterLargeFireString())
                 .disasterInlandWaterFlooding(emergencyEvacuationSite.getDisasterInlandWaterFloodingString())
                 .disasterVolcanicPhenomenon(emergencyEvacuationSite.getDisasterVolcanicPhenomenonString())
+                .overlapWithShelter(emergencyEvacuationSite.getOverlapWithShelterString())
                 .capacity(emergencyEvacuationSite.getCapacityString())
                 .targetCommunities(emergencyEvacuationSite.getTargetCommunities())
                 .url(emergencyEvacuationSite.getUrlString())

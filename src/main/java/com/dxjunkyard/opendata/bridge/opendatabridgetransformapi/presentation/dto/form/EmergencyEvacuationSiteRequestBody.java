@@ -342,8 +342,8 @@ public class EmergencyEvacuationSiteRequestBody {
      * </p>
      */
     @Nonnull
-    @Schema(description = "災害種別_洪水。掲載区分:必須。説明:指定緊急避難場所が対応している災害(火災)を記載", example = "1")
-    private final String disasterFlood;
+    @Schema(description = "災害種別_洪水。掲載区分:必須。説明:指定緊急避難場所が対応している災害(火災)を記載", example = "true")
+    private final Boolean disasterFlood;
 
     /**
      * 災害種別_崖崩れ、土石流及び地滑り
@@ -354,8 +354,8 @@ public class EmergencyEvacuationSiteRequestBody {
      * </p>
      */
     @Nonnull
-    @Schema(description = "災害種別_崖崩れ、土石流及び地滑り。掲載区分:必須。説明:指定緊急避難場所が対応している災害(崖崩れ、土石流及び地滑り)を記載", example = "1")
-    private final String disasterLandslide;
+    @Schema(description = "災害種別_崖崩れ、土石流及び地滑り。掲載区分:必須。説明:指定緊急避難場所が対応している災害(崖崩れ、土石流及び地滑り)を記載", example = "true")
+    private final Boolean disasterLandslide;
 
     /**
      * 災害種別_高潮
@@ -366,8 +366,8 @@ public class EmergencyEvacuationSiteRequestBody {
      * </p>
      */
     @NonNull
-    @Schema(description = "災害種別_高潮。掲載区分:必須。説明:指定緊急避難場所が対応している災害(高潮)を記載", example = "1")
-    private final String disasterHighTide;
+    @Schema(description = "災害種別_高潮。掲載区分:必須。説明:指定緊急避難場所が対応している災害(高潮)を記載", example = "true")
+    private final Boolean disasterHighTide;
 
     /**
      * 災害種別_地震
@@ -378,8 +378,8 @@ public class EmergencyEvacuationSiteRequestBody {
      * </p>
      */
     @NonNull
-    @Schema(description = "災害種別_地震。掲載区分:必須。説明:指定緊急避難場所が対応している災害(地震)を記載", example = "1")
-    private final String disasterEarthquake;
+    @Schema(description = "災害種別_地震。掲載区分:必須。説明:指定緊急避難場所が対応している災害(地震)を記載", example = "true")
+    private final Boolean disasterEarthquake;
 
     /**
      * 災害種別_津波
@@ -390,8 +390,8 @@ public class EmergencyEvacuationSiteRequestBody {
      * </p>
      */
     @NonNull
-    @Schema(description = "災害種別_津波。掲載区分:必須。説明:指定緊急避難場所が対応している災害(津波)を記載", example = "1")
-    private final String disasterTsunami;
+    @Schema(description = "災害種別_津波。掲載区分:必須。説明:指定緊急避難場所が対応している災害(津波)を記載", example = "true")
+    private final Boolean disasterTsunami;
 
     /**
      * 災害種別_大規模な火事
@@ -402,8 +402,8 @@ public class EmergencyEvacuationSiteRequestBody {
      * </p>
      */
     @NonNull
-    @Schema(description = "災害種別_大規模な火事。掲載区分:必須。説明:指定緊急避難場所が対応している災害(大規模な火事)を記載", example = "1")
-    private final String disasterLargeFire;
+    @Schema(description = "災害種別_大規模な火事。掲載区分:必須。説明:指定緊急避難場所が対応している災害(大規模な火事)を記載", example = "true")
+    private final Boolean disasterLargeFire;
 
     /**
      * 災害種別_内水氾濫
@@ -414,8 +414,8 @@ public class EmergencyEvacuationSiteRequestBody {
      * </p>
      */
     @NonNull
-    @Schema(description = "災害種別_内水氾濫。掲載区分:必須。説明:指定緊急避難場所が対応している災害(内水氾濫)を記載", example = "1")
-    private final String disasterInlandWaterFlooding;
+    @Schema(description = "災害種別_内水氾濫。掲載区分:必須。説明:指定緊急避難場所が対応している災害(内水氾濫)を記載", example = "true")
+    private final Boolean disasterInlandWaterFlooding;
 
     /**
      * 災害種別_火山現象
@@ -426,8 +426,8 @@ public class EmergencyEvacuationSiteRequestBody {
      * </p>
      */
     @NonNull
-    @Schema(description = "災害種別_火山現象。掲載区分:必須。説明:指定緊急避難場所が対応している災害(火山現象)を記載", example = "1")
-    private final String disasterVolcanicPhenomenon;
+    @Schema(description = "災害種別_火山現象。掲載区分:必須。説明:指定緊急避難場所が対応している災害(火山現象)を記載", example = "true")
+    private final Boolean disasterVolcanicPhenomenon;
 
     /**
      * 指定避難所との重複
@@ -438,8 +438,8 @@ public class EmergencyEvacuationSiteRequestBody {
      * </p>
      */
     @NonNull
-    @Schema(description = "指定避難所との重複。掲載区分:必須。説明:指定緊急避難場所が指定避難所と重複している場合は1、重複していない場合は空文字を記載", example = "1")
-    private final String overlapWithShelter;
+    @Schema(description = "指定避難所との重複。掲載区分:必須。説明:指定緊急避難場所が指定避難所と重複している場合は1、重複していない場合は空文字を記載", example = "true")
+    private final Boolean overlapWithShelter;
 
     /**
      * 想定収容人数
@@ -451,8 +451,8 @@ public class EmergencyEvacuationSiteRequestBody {
      * </p>
      */
     @Nullable
-    @Schema(description = "想定収容人数。掲載区分:推奨。説明:指定緊急避難場所に収容可能な人数を記載", example = "810人")
-    private final String capacity;
+    @Schema(description = "想定収容人数。掲載区分:推奨。説明:指定緊急避難場所に収容可能な人数を記載", example = "810")
+    private final Integer capacity;
 
     /**
      * 対象となる町会・自治会
@@ -503,7 +503,7 @@ public class EmergencyEvacuationSiteRequestBody {
      * </p>
      */
     @Nullable
-    @Schema(description = "画像_ライセンス。掲載区分:推奨。説明:画像に対するライセンスについて記載", example = "CC BY 4.0")
+    @Schema(description = "画像_ライセンス。掲載区分:推奨。説明:画像に対するライセンスについて記載", example = "CC_BY_4_0")
     private final License imageLicense;
 
     /**
@@ -545,46 +545,22 @@ public class EmergencyEvacuationSiteRequestBody {
                 .postalCode(postalCode)
                 .cityCode(cityCode)
                 .organizationName(organizationName)
-                .disasterFlood(toBoolean(disasterFlood))
-                .disasterLandslide(toBoolean(disasterLandslide))
-                .disasterHighTide(toBoolean(disasterHighTide))
-                .disasterEarthquake(toBoolean(disasterEarthquake))
-                .disasterTsunami(toBoolean(disasterTsunami))
-                .disasterLargeFire(toBoolean(disasterLargeFire))
-                .disasterInlandWaterFlooding(toBoolean(disasterInlandWaterFlooding))
-                .disasterVolcanicPhenomenon(toBoolean(disasterVolcanicPhenomenon))
-                .overlapWithShelter(toBoolean(overlapWithShelter))
-                .capacity(toInteger(capacity))
+                .disasterFlood(disasterFlood)
+                .disasterLandslide(disasterLandslide)
+                .disasterHighTide(disasterHighTide)
+                .disasterEarthquake(disasterEarthquake)
+                .disasterTsunami(disasterTsunami)
+                .disasterLargeFire(disasterLargeFire)
+                .disasterInlandWaterFlooding(disasterInlandWaterFlooding)
+                .disasterVolcanicPhenomenon(disasterVolcanicPhenomenon)
+                .overlapWithShelter(overlapWithShelter)
+                .capacity(capacity)
                 .targetCommunities(targetCommunities)
                 .url(toURL(url))
                 .image(toURL(image))
                 .imageLicense(imageLicense)
                 .notes(notes)
                 .build();
-    }
-
-    /**
-     * 文字列をBooleanに変換する
-     *
-     * @param value 文字列
-     * @return Boolean
-     */
-    @NonNull
-    private static Boolean toBoolean(@Nullable String value) {
-        return "1".equals(value);
-    }
-
-    /**
-     * 文字列をIntegerに変換する
-     *
-     * @param value 文字列
-     * @return Integer
-     */
-    @Nullable
-    private static Integer toInteger(@Nullable String value) {
-        return Optional.ofNullable(value)
-                .map(Integer::valueOf)
-                .orElse(null);
     }
 
     /**

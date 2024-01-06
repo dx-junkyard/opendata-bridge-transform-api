@@ -25,8 +25,8 @@ public class SwaggerConfig {
     @NotNull
     private final String description;
 
-    @NotNull
-    private final String host;
+//    @NotNull
+//    private final String host;
 
     /**
      * OpenAPI configuration.
@@ -36,9 +36,9 @@ public class SwaggerConfig {
     @Bean
     public OpenAPI openAPI() {
         return new OpenAPI()
-                .servers(List.of(
-                        new Server()
-                                .url(host)))
+//                .servers(List.of(
+//                        new Server()
+//                                .url(host)))
                 .info(new Info()
                         .title(title)
                         .version(version)
