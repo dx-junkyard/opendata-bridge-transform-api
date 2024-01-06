@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: opendata-bridge-transform-api
+  main:
+    banner-mode: off
+  messages:
+    encoding: UTF-8
+  web:
+    locale: ja_JP
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+      write-enums-using-to-string: true
+  profiles:
+    default: local
+    group:
+      local:
+        - doc
+        - doc-local
+        - devtools
+      prod:
+        - doc
+        - doc-prod
