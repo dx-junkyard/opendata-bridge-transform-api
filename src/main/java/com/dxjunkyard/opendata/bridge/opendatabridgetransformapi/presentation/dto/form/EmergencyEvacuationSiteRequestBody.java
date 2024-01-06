@@ -2,6 +2,7 @@ package com.dxjunkyard.opendata.bridge.opendatabridgetransformapi.presentation.d
 
 import com.dxjunkyard.opendata.bridge.opendatabridgetransformapi.domain.model.opendata.License;
 import com.dxjunkyard.opendata.bridge.opendatabridgetransformapi.domain.model.opendata.standard.EmergencyEvacuationSite;
+import io.micrometer.common.util.StringUtils;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.annotation.Nonnull;
 import lombok.Getter;
@@ -570,13 +571,14 @@ public class EmergencyEvacuationSiteRequestBody {
      * @return URL
      */
     @Nullable
-    private static URL toURL(@Nullable String value) {
+    private static URL toURL(final @Nullable String value) {
         return Optional.ofNullable(value)
+                .filter(StringUtils::isNotBlank)
                 .map(v -> {
                     try {
                         return new URL(v);
-                    } catch (MalformedURLException e) {
-                        throw new RuntimeException(e);
+                    } catch (final MalformedURLException e) {
+                        return null;
                     }
                 })
                 .orElse(null);
